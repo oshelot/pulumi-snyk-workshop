@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-insecure
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: demo }
+  template:
+    metadata:
+      labels: { app: demo }
+    spec:
+      containers:
+        - name: app
+          image: nginx:latest # old/latest tag likely flagged
+          securityContext:
+            runAsUser: 0      # root
+            allowPrivilegeEscalation: true
+          resources: {}        # no limits/requests

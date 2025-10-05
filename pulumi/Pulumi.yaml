@@ -1,0 +1,4 @@
+name: tech-challenge
+runtime:
+  name: python
+description: Pulumi + Snyk workshop (Python)
