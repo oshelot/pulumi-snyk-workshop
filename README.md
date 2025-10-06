@@ -1,4 +1,4 @@
-# Pulumi + Snyk Workshop (Python)
+# Pulumi + Snyk Workshop
 
 Hands-on lab showing shift-left security with Snyk (IaC + container) and Pulumi (policy as code + ESC secrets).
 
