@@ -2,29 +2,6 @@
 
 Hands-on lab showing shift-left security with Snyk (IaC + container) and Pulumi (policy as code + ESC secrets).
 
-## Prereqs (locally or in Instruqt image)
-- Node.js or Python runtime (Python 3.10+)
-- Pulumi CLI
-- Snyk CLI (authenticated: `snyk auth`)
-- Docker daemon (for container scan)
-- Optional: Pulumi Cloud with ESC enabled
-
-## Quick Start
-```bash
-# 1) Snyk IaC
-snyk iac test k8s/manifests/insecure-deployment.yaml
-
-# 2) Pipeline simulation (IaC + container)
-bash run-pipeline.sh
-
-# 3) Pulumi policies and deploy (Python)
-cd pulumi
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-pulumi stack init tech-challenge/obs-sec-lab
-pulumi preview --policy-pack ./policy
-# fix __main__.py until policies pass
-pulumi up
 # Workshop Abstract  
 **Title:** Shift-Left Security Hands-On: Pulumi + Snyk Golden Path (Python)  
 **Audience:** Platform & Security Engineers (beginner–intermediate IaC)  
@@ -52,3 +29,29 @@ By the end of the session, learners will understand how to create and enforce **
 - Basic familiarity with cloud infrastructure and Python.  
 - Pulumi and Snyk accounts (free tier is sufficient).  
 - Browser-based Instruqt environment (no local setup required).  
+
+
+## Prereqs (locally or in Instruqt image)
+- Node.js or Python runtime (Python 3.10+)
+- Pulumi CLI
+- Snyk CLI (authenticated: `snyk auth`)
+- Docker daemon (for container scan)
+- Optional: Pulumi Cloud with ESC enabled
+
+## Quick Start
+```bash
+# 1) Snyk IaC
+snyk iac test k8s/manifests/insecure-deployment.yaml
+
+# 2) Pipeline simulation (IaC + container)
+bash run-pipeline.sh
+
+# 3) Pulumi policies and deploy (Python)
+cd pulumi
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+pulumi stack init tech-challenge/obs-sec-lab
+pulumi preview --policy-pack ./policy
+# fix __main__.py until policies pass
+pulumi up
+
