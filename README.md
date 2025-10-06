@@ -31,12 +31,12 @@ By the end of the session, learners will understand how to create and enforce **
 - Browser-based Instruqt environment (no local setup required).  
 
 
-## Prereqs (locally or in Instruqt image)
+## Prereqs (Installed in Instruqt)
 - Node.js or Python runtime (Python 3.10+)
 - Pulumi CLI
 - Snyk CLI (authenticated: `snyk auth`)
 - Docker daemon (for container scan)
-- Optional: Pulumi Cloud with ESC enabled
+- Pulumi Cloud with ESC enabled
 
 ## Quick Start
 ```bash
