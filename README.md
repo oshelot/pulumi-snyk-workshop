@@ -3,7 +3,7 @@
 Hands-on lab showing shift-left security with Snyk (IaC + container) and Pulumi (policy as code + ESC secrets).
 
 # Workshop Abstract  
-**Title:** Shift-Left Security Hands-On: Pulumi + Snyk Golden Path (Python)  
+**Title:** Shift-Left Security Hands-On: Pulumi + Snyk Golden Path 
 **Audience:** Platform & Security Engineers (beginner–intermediate IaC)  
 **Duration:** 45–60 minutes  
 
